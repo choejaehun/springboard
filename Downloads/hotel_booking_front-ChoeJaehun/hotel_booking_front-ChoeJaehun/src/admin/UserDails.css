@@ -1,0 +1,53 @@
+/* UserDetails.css */
+
+.user-details-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f0f8ff; /* 하늘색 배경 */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-details-container h1 {
+    text-align: center;
+    color: #00509e; /* 진한 하늘색 */
+    margin-bottom: 20px;
+}
+
+.user-details-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-details-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #00509e;
+}
+
+.user-details-container input,
+.user-details-container select {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.user-details-container input:read-only {
+    background-color: #e9ecef;
+}
+
+.user-details-container button {
+    padding: 10px;
+    background-color: #00509e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-details-container button:hover {
+    background-color: #003f7f; /* 버튼 호버시 진한 색 */
+}
