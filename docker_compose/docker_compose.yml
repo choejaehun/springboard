@@ -1,0 +1,28 @@
+# docker-compose.yml (Docker Hub 또는 GitHub에 저장된 파일)
+version: '3'
+services:
+  jenkins:
+    image: choijaehun/jenkins:latest
+    container_name: jenkins_server
+    ports:
+      - "18080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    networks:
+      - ci-network
+
+  ansible:
+    image: choijaehun/ansible:latest
+    container_name: ansible
+    volumes:
+      - ./ansible_playbooks:/etc/ansible/playbooks
+    networks:
+      - ci-network
+
+networks:
+  ci-network:
+    driver: bridge
+
+volumes:
+  jenkins_home:
